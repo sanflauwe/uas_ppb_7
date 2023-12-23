@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uas_ppb_7/second.dart';
+import 'package:uas_ppb_7/app/second.dart';
 
 class FirstPage extends StatelessWidget {
   const FirstPage({super.key});
@@ -18,22 +18,21 @@ class FirstPage extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const SecondPage(
-                        data: '...',
-                      ),
+                      builder: (context) => const SecondPage(),
                     ),
                   );
                 },
                 child: const Text(
-                  '. . .',
+                  ".  .  .",
                   style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
                     color: Colors.white,
-                    fontSize: 30,
                   ),
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

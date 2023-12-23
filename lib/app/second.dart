@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:uas_ppb_7/app/login.dart';
+import 'package:uas_ppb_7/app/signup.dart';
 
 class SecondPage extends StatelessWidget {
-  const SecondPage({
-    super.key,
-    required this.data,
-  });
-
-  final String data;
+  const SecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,11 +34,18 @@ class SecondPage extends StatelessWidget {
                       backgroundColor:
                           MaterialStatePropertyAll(Colors.amberAccent),
                     ),
-                    onPressed: () {},
-                    child: Container(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Login(),
+                        ),
+                      );
+                    },
+                    child: const SizedBox(
                       width: 200,
                       height: 30,
-                      child: const Text(
+                      child: Text(
                         "I am a member",
                         style: TextStyle(
                           color: Colors.black,
@@ -58,11 +62,18 @@ class SecondPage extends StatelessWidget {
                     backgroundColor:
                         MaterialStatePropertyAll(Colors.amberAccent),
                   ),
-                  onPressed: () {},
-                  child: Container(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUp(),
+                      ),
+                    );
+                  },
+                  child: const SizedBox(
                     width: 200,
                     height: 30,
-                    child: const Text(
+                    child: Text(
                       "I am new here",
                       style: TextStyle(
                         color: Colors.black,
